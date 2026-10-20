@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: soko-coffee
+    runtime: node
+    plan: starter            # persistent disk needs a paid plan
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
+    disk:
+      name: soko-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: DATA_DIR
+        value: /var/data
+      - key: ADMIN_PASSWORD
+        sync: false          # Render asks you to type it during setup

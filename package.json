@@ -1,0 +1,18 @@
+{
+ "name": "soko-coffee-ordering",
+ "version": "1.0.0",
+ "private": true,
+ "scripts": {
+  "start": "node server.js"
+ },
+ "dependencies": {
+  "express": "^4.19.2",
+  "qrcode": "^1.5.4"
+ },
+ "optionalDependencies": {
+  "nodemailer": "^6.9.14"
+ },
+ "engines": {
+  "node": ">=18"
+ }
+}
